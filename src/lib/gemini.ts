@@ -25,7 +25,7 @@ export async function generateAIResponse(
     if (lastMessage?.includes("plan my week")) {
       return "*(Mock Mode - Add VITE_GEMINI_API_KEY)* \n\nHere's a suggested schedule for your week based on your usual high-productivity hours: \n\n**Monday-Wednesday**: Focus on deep work (Coding/Design) between 10 AM and 2 PM.";
     }
-    return "*(Mock Mode - Add VITE_GEMINI_API_KEY to your .env file to enable real AI)*\n\nI understand. I'm your FlowForge AI Assistant, analyzing your productivity patterns. Could you provide a bit more detail?";
+    return "*(Mock Mode - Add VITE_GEMINI_API_KEY to your .env file to enable real AI)*\n\nI understand. I'm your FocusPilot AI Assistant, analyzing your productivity patterns. Could you provide a bit more detail?";
   }
 
   try {
@@ -37,7 +37,7 @@ export async function generateAIResponse(
 
     const chat = model.startChat({
       history,
-      systemInstruction: "You are FlowForge AI, an elite productivity assistant for freelancers. You are embedded in a premium SaaS dashboard. Keep your answers concise, highly actionable, and professional but modern. Use markdown formatting like bolding and lists when appropriate. Focus on preventing burnout, optimizing schedules, and boosting earnings efficiency."
+      systemInstruction: "You are FocusPilot AI, an elite productivity assistant for freelancers. You are embedded in a premium SaaS dashboard. Keep your answers concise, highly actionable, and professional but modern. Use markdown formatting like bolding and lists when appropriate. Focus on preventing burnout, optimizing schedules, and boosting earnings efficiency."
     });
 
     const lastUserMessage = messages[messages.length - 1].content;

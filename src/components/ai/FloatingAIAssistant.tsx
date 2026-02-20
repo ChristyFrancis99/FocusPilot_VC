@@ -17,7 +17,7 @@ export default function FloatingAIAssistant() {
     {
       id: "1",
       role: "assistant",
-      content: "Hi! I'm FlowForge AI. How can I assist with your productivity today?",
+      content: "Hi! I'm FocusPilot AI. How can I assist with your productivity today?",
       timestamp: new Date()
     }
   ]);
@@ -83,7 +83,7 @@ export default function FloatingAIAssistant() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground tracking-tight flex items-center gap-2">
-                    FlowForge AI
+                    FocusPilot AI
                     <Sparkles className="w-3.5 h-3.5 text-accent animate-pulse" />
                   </h3>
                   <p className="text-xs text-muted-foreground">Always here to help</p>

@@ -15,7 +15,7 @@ export default function Index() {
       >
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary mb-4 glow-primary">
           <SparklesIcon className="w-4 h-4 animate-pulse" />
-          <span className="text-sm font-medium tracking-wide">Introducing FlowForge AI 2.0</span>
+          <span className="text-sm font-medium tracking-wide">Introducing FocusPilot AI 2.0</span>
         </div>
 
         <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-foreground leading-[1.1]">
@@ -24,7 +24,7 @@ export default function Index() {
         </h1>
 
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-          Stop guessing and start optimizing. FlowForge AI analyzes your work patterns, prevents burnout, and prioritizes what matters most—automatically.
+          Stop guessing and start optimizing. FocusPilot AI analyzes your work patterns, prevents burnout, and prioritizes what matters most—automatically.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">

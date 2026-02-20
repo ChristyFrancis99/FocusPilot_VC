@@ -1,5 +1,5 @@
-import { NavLink, useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { NavLink, useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 import {
   LayoutDashboard,
   ListTodo,
@@ -9,14 +9,14 @@ import {
   Settings,
   ChevronLeft,
   ChevronRight,
-} from 'lucide-react';
-import { useState } from 'react';
+} from "lucide-react";
+import { useState } from "react";
 
 const navItems = [
-  { path: '/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
-  { path: '/tasks', icon: ListTodo, label: 'Tasks' },
-  { path: '/analytics', icon: BarChart3, label: 'Analytics' },
-  { path: '/assistant', icon: Bot, label: 'AI Assistant' },
+  { path: "/dashboard", icon: LayoutDashboard, label: "Dashboard" },
+  { path: "/tasks", icon: ListTodo, label: "Tasks" },
+  { path: "/analytics", icon: BarChart3, label: "Analytics" },
+  { path: "/assistant", icon: Bot, label: "AI Assistant" },
 ];
 
 export default function Sidebar() {
@@ -26,14 +26,18 @@ export default function Sidebar() {
   return (
     <motion.aside
       animate={{ width: collapsed ? 72 : 240 }}
-      transition={{ duration: 0.3, ease: 'easeInOut' }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
       className="fixed left-0 top-0 h-screen bg-sidebar border-r border-sidebar-border flex flex-col z-50"
     >
       {/* Logo */}
       <div className="h-16 flex items-center px-4 border-b border-sidebar-border">
         <div className="flex items-center gap-2.5 overflow-hidden">
           <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 glow-primary">
-            <Zap className="w-4 h-4 text-primary" />
+            <img
+              src="/fp.png"
+              alt="FocusPilot Logo"
+              className="w-6 h-6 object-contain"
+            />
           </div>
           {!collapsed && (
             <motion.span
@@ -41,7 +45,7 @@ export default function Sidebar() {
               animate={{ opacity: 1 }}
               className="font-bold text-foreground tracking-tight whitespace-nowrap"
             >
-              FlowForge <span className="text-primary">AI</span>
+              Focus<span className="text-primary">Pilot</span>
             </motion.span>
           )}
         </div>
@@ -57,15 +61,15 @@ export default function Sidebar() {
               to={item.path}
               className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 group relative ${
                 isActive
-                  ? 'bg-primary/10 text-primary'
-                  : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
+                  ? "bg-primary/10 text-primary"
+                  : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
               }`}
             >
               {isActive && (
                 <motion.div
                   layoutId="sidebar-indicator"
                   className="absolute left-0 top-1/2 -translate-y-1/2 w-0.5 h-5 bg-primary rounded-r-full"
-                  transition={{ type: 'spring', stiffness: 350, damping: 30 }}
+                  transition={{ type: "spring", stiffness: 350, damping: 30 }}
                 />
               )}
               <item.icon className="w-5 h-5 shrink-0" />
@@ -89,7 +93,11 @@ export default function Sidebar() {
           onClick={() => setCollapsed(!collapsed)}
           className="w-full flex items-center justify-center gap-3 px-3 py-2.5 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors"
         >
-          {collapsed ? <ChevronRight className="w-4 h-4" /> : <ChevronLeft className="w-4 h-4" />}
+          {collapsed ? (
+            <ChevronRight className="w-4 h-4" />
+          ) : (
+            <ChevronLeft className="w-4 h-4" />
+          )}
           {!collapsed && <span className="text-sm">Collapse</span>}
         </button>
       </div>
