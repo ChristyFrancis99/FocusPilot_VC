@@ -199,13 +199,3 @@ npm install
 
 # Start development server
 npm run dev
-
-🤝 Contributors
-
-Your Name
-
-Team Members
-
-📜 License
-
-This project is developed for educational and innovation purposes under SDG 8 initiative.
